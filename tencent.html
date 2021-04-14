@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bigdiv {
+            background-color: blue;
+            height: 800px;
+            width: 800px;
+        }
+        #app {
+            height: 400px;
+            width: 400px;
+            margin: 0 auto;
+            background-color: aqua;
+        }
+        #myul {
+            list-style: none;
+        }
+        #myarea {
+            height: 100px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div id="bigdiv">
+        <div id="app">
+            姓名：<input id="myinput"/>
+            <br/>
+            密码：<input type="password" myinput2"/>
+            <br/>
+            性别:
+            <label for="nan">男</label><input id="nan" name="sex" type= "radio" checked="checked" value="man"/>
+            女<input name="sex" type= "radio" value="woman"/>
+            <br/>
+            年级
+            <select>
+                <option>大一</option>
+                <option>大二</option>
+                <option>大三</option>
+                <option>大四</option>
+            </select>
+            <br/>
+            邮箱
+            <input type="text">
+            <br/>
+            兴趣
+            <input type="checkbox" name="ins" value="wan"/>玩
+            <input type="checkbox" name="ins" value="chi"/>吃
+            <br/>
+            签名
+            <textarea id="myarea"></textarea>
+            <br/>
+            <table border="1" cellspacing="0">
+                <tr>
+                    <th>name</th>
+                    <th>sex</th>
+                </tr>
+                <tr>
+                    <td>dxy</td>
+                    <td>nan</td>
+                </tr>
+            </table>
+            <dl>
+                <dt>asd</dt>
+                <dd>asdda</dd>
+                <dd>asdasdasd</dd>
+            </dl>
+            <ul id="myul">
+                <li>asdasd</li>
+                <li>asd</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var input = document.getElementsByName("sex");
+        function show(){
+            for(i in input){
+                if(input[i].checked){
+                    alert(input[i].value);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

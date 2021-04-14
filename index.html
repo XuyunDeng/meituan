@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv {
+            height: 100px;
+            border-style: solid;
+            border-color: black;
+            position:relative;
+        }
+       #value {
+            font-size: 1rem;
+            font-weight:1000;
+            text-align: center;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #mydiv:hover {
+            background-color: red;
+        }
+        #myp::first-line{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv">
+        <p id=myp ></p>
+        <input id="value" placeholder="wait"/>
+        <button  onclick="doubleclick()">test</button>
+    </div>
+    <script>
+        var app = document.getElementById("mydiv");
+        app.addEventListener('click',doubleclick);
+        var timeout;
+        function doubleclick(){
+            if(timeout){
+                var g = document.getElementById('value').value;
+                alert(g);
+            }else{
+                timeout = setTimeout(() => {
+                    timeout = null;
+                }, 300);
+            }
+        }
+        class TreeNode{
+            constructor(value){
+                this.value=value;
+                this.left=null;
+                this.right=null;
+            }
+        }
+        
+        var name ="mydog";
+        var str = `asdasdasd${name}
+        asdasd
+        asd`;
+        let root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        var myp = document.getElementById("myp");
+        myp.innerHTML=str;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</body>
+</html>
